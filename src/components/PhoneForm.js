@@ -7,12 +7,16 @@ class PhoneForm extends Component {
     };
 
     handleChange = (e) => {
+        console.log('phoneForm handleChange');
         this.setState({
             [e.target.name]: e.target.value
         })
     };
     handelSubmit = (e) => {
+        // 페이지 리로딩 방지
         e.preventDefault();
+        console.log('phoneForm handelSubmit ');
+        console.log(this.state);
         this.props.onCreate(this.state);
         this.setState({
             name: '',
@@ -21,6 +25,7 @@ class PhoneForm extends Component {
     };
 
     render() {
+        console.log('phoneForm render');
         return (
             <form onSubmit={this.handelSubmit}>
                 <input placeholder="Name" value={this.state.name} onChange={this.handleChange} name="name"/>
