@@ -1,5 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
-import {Map, List, Record} from 'immutable';
+import {List, Record} from 'immutable';
 
 const CHANGE_INPUT = 'todo/CHANGE_INPUT';
 const INSERT = 'todo/INSERT';
